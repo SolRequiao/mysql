@@ -3,10 +3,10 @@ version: '3.8'
 services:
   mysql:
     image: mysql:latest
-    restart: always
-    container_name: mysql-container
+    #restart: always
+    container_name: ${CONTAINER_NAME}
     environment:
-      MYSQL_ROOT_PASSWORD: 'rootpassword'
+      MYSQL_ROOT_PASSWORD: ${ROOT_PASSWORD}
     ports:
       - '3306:3306'
     volumes:
